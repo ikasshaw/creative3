@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://localhost:8080/drivers -->
+<html lang="">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>creative3</title>
+    <script defer="" src="./creative3_files/chunk-vendors.js"></script>
+    <script defer="" src="./creative3_files/app.js"></script>
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap);
+    </style>
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+        font-family: 'Roboto', 'Montserrat', 'Open Sans', 'Helvetica Neue',
+          sans-serif;
+      }
+      #app {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      .allExceptFooter {
+        padding-bottom: 100px;
+        /*margin: 50px 100px 0 100px;*/
+      }
+      #menu {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px 0 10px;
+        margin: 5px 5px 65px 5px;
+      }
+      #menu a {
+        text-decoration: none;
+      }
+      #brand {
+        grid-area: brand;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+      }
+      #brand img {
+        height: 75px;
+      }
+      #bottom {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+      }
+      .menu-item {
+        display: flex;
+        flex-direction: column;
+        color: red;
+        font-size: 1.75em;
+      }
+      .menu-item p {
+        margin: 0px;
+      }
+      footer {
+        /*position: sticky;*/
+        /*bottom: 0;*/
+        background-color: #292f3633;
+        display: flex;
+        /*width: 100%;*/
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0 15px 0;
+        margin-top: auto;
+      }
+      footer a {
+        text-decoration: none;
+      }
+      footer a img {
+        max-width: 30px;
+      }
+    </style>
+    <style type="text/css">
+      p[data-v-9ea40744] {
+        padding: 20px;
+      }
+    </style>
+    <style type="text/css">
+      .wrapper[data-v-67904b4b] {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .teams[data-v-67904b4b] {
+        /*margin-top: 20px;*/
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .team[data-v-67904b4b] {
+        display: flex;
+        margin: 20px 10px 20px;
+        height: 120px;
+        width: 90vw;
+        padding: 10px;
+        border: 2px solid #333;
+      }
+      .image[data-v-67904b4b] {
+        display: flex;
+        margin-right: 30px;
+        height: 100px;
+        width: 100px;
+        justify-items: center;
+        align-items: center;
+      }
+      .team img[data-v-67904b4b] {
+        max-height: 100px;
+        max-width: 100px;
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+      .info[data-v-67904b4b] {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+        color: #000;
+      }
+      .info h2[data-v-67904b4b] {
+        font-size: 1.5em;
+        margin: 0;
+        padding-bottom: 30px;
+        align-self: center;
+      }
+      .drivers[data-v-67904b4b] {
+        display: flex;
+        justify-content: space-around;
+      }
+      .info p[data-v-67904b4b] {
+        margin: 0px;
+        font-size: 13px;
+      }
+    </style>
+    <style type="text/css">
+      .wrapper[data-v-86af019e] {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .search[data-v-86af019e] {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 50%;
+      }
+      form[data-v-86af019e] {
+        display: table;
+        width: 100%;
+      }
+      i[data-v-86af019e] {
+        display: table-cell;
+        padding-left: 10px;
+        width: 1px;
+      }
+      input[data-v-86af019e] {
+        display: table-cell;
+        font-size: 20px;
+        border: none !important;
+        box-shadow: none !important;
+        width: 100%;
+        height: 40px;
+      }
+    </style>
+    <style type="text/css">
+      *[data-v-aa1ebfd4] {
+        box-sizing: border-box;
+      }
+      .wrapper[data-v-aa1ebfd4] {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .drivers[data-v-aa1ebfd4] {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 70vw;
+      }
+      .driver[data-v-aa1ebfd4] {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        margin: 10px 10px 30px;
+        height: 350px;
+        border-bottom: 2px solid #d4d4d4;
+      }
+      .driver img[data-v-aa1ebfd4] {
+        max-height: 250px;
+        max-width: 250px;
+        -o-object-fit: fill;
+        object-fit: fill;
+      }
+      .driver .image[data-v-aa1ebfd4] {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5px;
+      }
+      .info[data-v-aa1ebfd4] {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-self: center;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+      }
+      .name-country[data-v-aa1ebfd4] {
+        width: 100%;
+        /*display: flex;*/
+        justify-content: space-between;
+        align-content: start;
+        margin: 0;
+      }
+      .name-country p[data-v-aa1ebfd4],
+      h2[data-v-aa1ebfd4] {
+        margin: 0 3px 0 3px;
+      }
+      .team-number[data-v-aa1ebfd4] {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-content: start;
+        margin: 0;
+      }
+      .team-number[data-v-aa1ebfd4] {
+        margin: 0 3px 0 3px;
+        font-size: 3em;
+      }
+      .team-number h2[data-v-aa1ebfd4] {
+        font-size: 20px;
+      }
+      .info p[data-v-aa1ebfd4] {
+        margin: 0px;
+        font-size: 10px;
+      }
+      @media (min-width: 768px) {
+        .drivers[data-v-aa1ebfd4] {
+          margin-top: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+        }
+        .driver[data-v-aa1ebfd4] {
+          margin: 50px 10px 10px;
+          width: 250px;
+        }
+      }
+    </style>
+    <style type="text/css">
+      .wrapper[data-v-2f50e627] {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .search[data-v-2f50e627] {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 50%;
+      }
+      form[data-v-2f50e627] {
+        display: table;
+        width: 100%;
+      }
+      i[data-v-2f50e627] {
+        display: table-cell;
+        padding-left: 10px;
+        width: 1px;
+      }
+      input[data-v-2f50e627] {
+        display: table-cell;
+        font-size: 20px;
+        border: none !important;
+        box-shadow: none !important;
+        width: 100%;
+        height: 40px;
+      }
+    </style>
+  </head>
+  <body style="height: 100vh; margin: 8px 0 0 0">
+    <noscript>
+      <strong
+        >We're sorry but creative3 doesn't work properly without JavaScript
+        enabled. Please enable it to continue.</strong
+      >
+    </noscript>
+    <div id="app">
+      <div class="allExceptFooter">
+        <div id="menu">
+          <div id="brand">
+            <a href="http://localhost:8080/" class="router-link-active"
+              ><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABQAAAAFACAMAAADULSG6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAC+lBMVEUAAAD/AADwAADrAADwAADxAADwAADvAADsAADuAADtAADtAADuAADtAADuAADvAADuAADuAADuAADuAADvAADuAADvAADtAADuAADuAADuAADuAADuAADuAADuAADuAADuAADtAADqAADtAADuAADuAADuAADuAADvAADuAADuAADtAADvAADuAADuAADrAADtAADvAADtAADvAADtAADuAADuAADuAADuAADtAADvAADtAADuAADuAADuAADwAADfAADrAADtAADtAADtAADuAADuAADuAADvAADsAADuAADuAADvAAD/AADxAADvAADuAADtAADuAADuAADvAADuAAD/AADvAADuAADuAADuAADuAADuAADuAADuAADuAADuAADsAADvAADuAADuAADuAADuAADzAADuAADuAADuAADuAADrAADuAADuAADvAADtAAD/AADuAADrAADuAADqAADyAADxAADuAADuAADsAADuAADuAADuAADjAADuAADtAADuAADvAADzAADuAADuAADuAADtAADtAAD/AADuAADvAADvAADuAADtAADuAADuAADvAADuAADuAADtAADsAADuAADsAADuAADvAADuAADtAADtAADuAADwAADuAADvAADvAADtAAD/AADtAADtAADuAADuAADvAADtAADpAADuAADuAADsAADtAADtAADvAADuAADuAADvAADuAADvAADvAADvAADwAADvAADvAADtAAD/AADuAADtAADwAADmAADvAADtAADvAADtAADtAADuAADuAADvAADuAADvAADuAADuAADuAADuAADuAADuAADyAADuAADvAADtAADuAADvAADuAADuAADuAADvAADtAADtAADuAADvAADuAADuAADuAADuAADuAADoAADuAADtAADuAADuAADuAADuAADuAADvAADwAADuAADvAADtAADvAADuAADuAADwAADuAADuAADvAADtAADuAADuAADtAADuAAD////GO/SUAAAA/HRSTlMABBEaIiUzQURMVVdmc3d/iIqZpqqxu7zM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"
+            /></a>
+          </div>
+          <div id="bottom">
+            <a href="http://localhost:8080/teams" class=""
+              ><div class="menu-item browse"><p>TEAMS</p></div></a
+            ><a
+              href="http://localhost:8080/drivers"
+              class="router-link-exact-active router-link-active"
+              aria-current="page"
+              ><div class="menu-item"><p>DRIVERS</p></div></a
+            >
+          </div>
+        </div>
+        <div data-v-2f50e627="">
+          <div data-v-aa1ebfd4="" data-v-2f50e627="" class="wrapper">
+            <div data-v-aa1ebfd4="" class="drivers">
+              <div data-v-aa1ebfd4="" class="driver">
+                <div data-v-aa1ebfd4="" class="name-country">
+                  <h2 data-v-aa1ebfd4="">Lewis Hamilton</h2>
+                  <p data-v-aa1ebfd4="">United Kingdom</p>
+                </div>
+                <div data-v-aa1ebfd4="" class="image">
+                  <img
+                    data-v-aa1ebfd4=""
+                    src="./creative3_files/hamilton.jpg" />
+                </div>
+                <div data-v-aa1ebfd4="" class="info">
+                  <div data-v-aa1ebfd4="" class="team-number">
+                    <h2 data-v-aa1ebfd4="">Mercedes</h2>
+                    <h2 data-v-aa1ebfd4="">44</h2>
+                  </div>
+                </div>
+              </div>
+              <div data-v-aa1ebfd4="" class="driver">
+                <div data-v-aa1ebfd4="" class="name-country">
+                  <h2 data-v-aa1ebfd4="">George Russell</h2>
+                  <p data-v-aa1ebfd4="">United Kingdom</p>
+                </div>
+                <div data-v-aa1ebfd4="" class="image">
+                  <img data-v-aa1ebfd4="" src="./creative3_files/russell.jpg" />
+                </div>
+                <div data-v-aa1ebfd4="" class="info">
+                  <div data-v-aa1ebfd4="" class="team-number">
+                    <h2 data-v-aa1ebfd4="">Mercedes</h2>
+                    <h2 data-v-aa1ebfd4="">63</h2>
+                  </div>
+                </div>
+              </div>
+              <div data-v-aa1ebfd4="" class="driver">
+                <div data-v-aa1ebfd4="" class="name-country">
+                  <h2 data-v-aa1ebfd4="">Max Verstappen</h2>
+                  <p data-v-aa1ebfd4="">Netherlands</p>
+                </div>
+                <div data-v-aa1ebfd4="" class="image">
+                  <img
+                    data-v-aa1ebfd4=""
+                    src="./creative3_files/verstappen.jpg" />
+                </div>
+                <div data-v-aa1ebfd4="" class="info">
+                  <div data-v-aa1ebfd4="" class="team-number">
+                    <h2 data-v-aa1ebfd4="">Red Bull Racing</h2>
+                    <h2 data-v-aa1ebfd4="">1</h2>
+                  </div>
+                </div>
+              </div>
+              <div data-v-aa1ebfd4="" class="driver">
+                <div data-v-aa1ebfd4="" class="name-country">
+                  <h2 data-v-aa1ebfd4="">Sergio Perez</h2>
+                  <p data-v-aa1ebfd4="">Mexico</p>
+                </div>
+                <div data-v-aa1ebfd4="" class="image">
+                  <img data-v-aa1ebfd4="" src="./creative3_files/perez.jpg" />
+                </div>
+                <div data-v-aa1ebfd4="" class="info">
+                  <div data-v-aa1ebfd4="" class="team-number">
+                    <h2 data-v-aa1ebfd4="">Red Bull Racing</h2>
+                    <h2 data-v-aa1ebfd4="">11</h2>
+                  </div>
+                </div>
+              </div>
+              <div data-v-aa1ebfd4="" class="driver">
+                <div data-v-aa1ebfd4="" class="name-country">
+                  <h2 data-v-aa1ebfd4="">Charles Leclerc</h2>
+                  <p data-v-aa1ebfd4="">Monaco</p>
+                </div>
+                <div data-v-aa1ebfd4="" class="image">
+                  <img data-v-aa1ebfd4="" src="./creative3_files/leclerc.jpg" />
+                </div>
+                <div data-v-aa1ebfd4="" class="info">
+                  <div data-v-aa1ebfd4="" class="team-number">
+                    <h2 data-v-aa1ebfd4="">Ferrari</h2>
+                    <h2 data-v-aa1ebfd4="">16</h2>
+                  </div>
+                </div>
+              </div>
+              <div data-v-aa1ebfd4="" class="driver">
+                <div data-v-aa1ebfd4="" class="name-country">
+                  <h2 data-v-aa1ebfd4="">Carlos Sainz</h2>
+                  <p data-v-aa1ebfd4="">Spain</p>
+                </div>
+                <div data-v-aa1ebfd4="" class="image">
+                  <img data-v-aa1ebfd4="" src="./creative3_files/sainz.jpg" />
+                </div>
+                <div data-v-aa1ebfd4="" class="info">
+                  <div data-v-aa1ebfd4="" class="team-number">
+                    <h2 data-v-aa1ebfd4="">Ferrari</h2>
+                    <h2 data-v-aa1ebfd4="">55</h2>
+                  </div>
+                </div>
+              </div>
+              <div data-v-aa1ebfd4="" class="driver">
+                <div data-v-aa1ebfd4="" class="name-country">
+                  <h2 data-v-aa1ebfd4="">Lando Norris</h2>
+                  <p data-v-aa1ebfd4="">United Kingdom</p>
+                </div>
+                <div data-v-aa1ebfd4="" class="image">
+                  <img data-v-aa1ebfd4="" src="./creative3_files/norris.jpg" />
+                </div>
+                <div data-v-aa1ebfd4="" class="info">
+                  <div data-v-aa1ebfd4="" class="team-number">
+                    <h2 data-v-aa1ebfd4="">Mclaren</h2>
+                    <h2 data-v-aa1ebfd4="">4</h2>
+                  </div>
+                </div>
+              </div>
+              <div data-v-aa1ebfd4="" class="driver">
+                <div data-v-aa1ebfd4="" class="name-country">
+                  <h2 data-v-aa1ebfd4="">Daniel Ricciardo</h2>
+                  <p data-v-aa1ebfd4="">Australia</p>
+                </div>
+                <div data-v-aa1ebfd4="" class="image">
+                  <img
+                    data-v-aa1ebfd4=""
+                    src="./creative3_files/ricciardo.jpg" />
+                </div>
+                <div data-v-aa1ebfd4="" class="info">
+                  <div data-v-aa1ebfd4="" class="team-number">
+                    <h2 data-v-aa1ebfd4="">Mclaren</h2>
+                    <h2 data-v-aa1ebfd4="">3</h2>
+                  </div>
+                </div>
+              </div>
+              <div data-v-aa1ebfd4="" class="driver">
+                <div data-v-aa1ebfd4="" class="name-country">
+                  <h2 data-v-aa1ebfd4="">Esteban Ocon</h2>
+                  <p data-v-aa1ebfd4="">France</p>
+                </div>
+                <div data-v-aa1ebfd4="" class="image">
+                  <img data-v-aa1ebfd4="" src="./creative3_files/ocon.jpg" />
+                </div>
+                <div data-v-aa1ebfd4="" class="info">
+                  <div data-v-aa1ebfd4="" class="team-number">
+                    <h2 data-v-aa1ebfd4="">Alpine</h2>
+                    <h2 data-v-aa1ebfd4="">31</h2>
+                  </div>
+                </div>
+              </div>
+              <div data-v-aa1ebfd4="" class="driver">
+                <div data-v-aa1ebfd4="" class="name-country">
+                  <h2 data-v-aa1ebfd4="">Fernando Alonso</h2>
+                  <p data-v-aa1ebfd4="">Spain</p>
+                </div>
+                <div data-v-aa1ebfd4="" class="image">
+                  <img data-v-aa1ebfd4="" src="./creative3_files/alonso.jpg" />
+                </div>
+                <div data-v-aa1ebfd4="" class="info">
+                  <div data-v-aa1ebfd4="" class="team-number">
+                    <h2 data-v-aa1ebfd4="">Alpine</h2>
+                    <h2 data-v-aa1ebfd4="">14</h2>
+                  </div>
+                </div>
+              </div>
+              <div data-v-aa1ebfd4="" class="driver">
+                <div data-v-aa1ebfd4="" class="name-country">
+                  <h2 data-v-aa1ebfd4="">Pierre Gasly</h2>
+                  <p data-v-aa1ebfd4="">France</p>
+                </div>
+                <div data-v-aa1ebfd4="" class="image">
+                  <img data-v-aa1ebfd4="" src="./creative3_files/gasly.jpg" />
+                </div>
+                <div data-v-aa1ebfd4="" class="info">
+                  <div data-v-aa1ebfd4="" class="team-number">
+                    <h2 data-v-aa1ebfd4="">AlphaTauri</h2>
+                    <h2 data-v-aa1ebfd4="">10</h2>
+                  </div>
+                </div>
+              </div>
+              <div data-v-aa1ebfd4="" class="driver">
+                <div data-v-aa1ebfd4="" class="name-country">
+                  <h2 data-v-aa1ebfd4="">Yuki Tsunoda</h2>
+                  <p data-v-aa1ebfd4="">Japan</p>
+                </div>
+                <div data-v-aa1ebfd4="" class="image">
+                  <img data-v-aa1ebfd4="" src="./creative3_files/tsunoda.jpg" />
+                </div>
+                <div data-v-aa1ebfd4="" class="info">
+                  <div data-v-aa1ebfd4="" class="team-number">
+                    <h2 data-v-aa1ebfd4="">AlphaTauri</h2>
+                    <h2 data-v-aa1ebfd4="">22</h2>
+                  </div>
+                </div>
+              </div>
+              <div data-v-aa1ebfd4="" class="driver">
+                <div data-v-aa1ebfd4="" class="name-country">
+                  <h2 data-v-aa1ebfd4="">Lance Stroll</h2>
+                  <p data-v-aa1ebfd4="">Canada</p>
+                </div>
+                <div data-v-aa1ebfd4="" class="image">
+                  <img data-v-aa1ebfd4="" src="./creative3_files/stroll.jpg" />
+                </div>
+                <div data-v-aa1ebfd4="" class="info">
+                  <div data-v-aa1ebfd4="" class="team-number">
+                    <h2 data-v-aa1ebfd4="">Aston Martin</h2>
+                    <h2 data-v-aa1ebfd4="">18</h2>
+                  </div>
+                </div>
+              </div>
+              <div data-v-aa1ebfd4="" class="driver">
+                <div data-v-aa1ebfd4="" class="name-country">
+                  <h2 data-v-aa1ebfd4="">Sebastian Vettel</h2>
+                  <p data-v-aa1ebfd4="">Germany</p>
+                </div>
+                <div data-v-aa1ebfd4="" class="image">
+                  <img data-v-aa1ebfd4="" src="./creative3_files/vettel.jpg" />
+                </div>
+                <div data-v-aa1ebfd4="" class="info">
+                  <div data-v-aa1ebfd4="" class="team-number">
+                    <h2 data-v-aa1ebfd4="">Aston Martin</h2>
+                    <h2 data-v-aa1ebfd4="">5</h2>
+                  </div>
+                </div>
+              </div>
+              <div data-v-aa1ebfd4="" class="driver">
+                <div data-v-aa1ebfd4="" class="name-country">
+                  <h2 data-v-aa1ebfd4="">Alexander Albon</h2>
+                  <p data-v-aa1ebfd4="">Thailand</p>
+                </div>
+                <div data-v-aa1ebfd4="" class="image">
+                  <img data-v-aa1ebfd4="" src="./creative3_files/albon.jpg" />
+                </div>
+                <div data-v-aa1ebfd4="" class="info">
+                  <div data-v-aa1ebfd4="" class="team-number">
+                    <h2 data-v-aa1ebfd4="">Williams</h2>
+                    <h2 data-v-aa1ebfd4="">23</h2>
+                  </div>
+                </div>
+              </div>
+              <div data-v-aa1ebfd4="" class="driver">
+                <div data-v-aa1ebfd4="" class="name-country">
+                  <h2 data-v-aa1ebfd4="">Nicholas Latifi</h2>
+                  <p data-v-aa1ebfd4="">Canada</p>
+                </div>
+                <div data-v-aa1ebfd4="" class="image">
+                  <img data-v-aa1ebfd4="" src="./creative3_files/latifi.jpg" />
+                </div>
+                <div data-v-aa1ebfd4="" class="info">
+                  <div data-v-aa1ebfd4="" class="team-number">
+                    <h2 data-v-aa1ebfd4="">Williams</h2>
+                    <h2 data-v-aa1ebfd4="">6</h2>
+                  </div>
+                </div>
+              </div>
+              <div data-v-aa1ebfd4="" class="driver">
+                <div data-v-aa1ebfd4="" class="name-country">
+                  <h2 data-v-aa1ebfd4="">Valtteri Bottas</h2>
+                  <p data-v-aa1ebfd4="">Finland</p>
+                </div>
+                <div data-v-aa1ebfd4="" class="image">
+                  <img data-v-aa1ebfd4="" src="./creative3_files/bottas.jpg" />
+                </div>
+                <div data-v-aa1ebfd4="" class="info">
+                  <div data-v-aa1ebfd4="" class="team-number">
+                    <h2 data-v-aa1ebfd4="">Alfa Romeo</h2>
+                    <h2 data-v-aa1ebfd4="">77</h2>
+                  </div>
+                </div>
+              </div>
+              <div data-v-aa1ebfd4="" class="driver">
+                <div data-v-aa1ebfd4="" class="name-country">
+                  <h2 data-v-aa1ebfd4="">Zhou Guanyu</h2>
+                  <p data-v-aa1ebfd4="">China</p>
+                </div>
+                <div data-v-aa1ebfd4="" class="image">
+                  <img data-v-aa1ebfd4="" src="./creative3_files/guanyu.jpg" />
+                </div>
+                <div data-v-aa1ebfd4="" class="info">
+                  <div data-v-aa1ebfd4="" class="team-number">
+                    <h2 data-v-aa1ebfd4="">Alfa Romeo</h2>
+                    <h2 data-v-aa1ebfd4="">24</h2>
+                  </div>
+                </div>
+              </div>
+              <div data-v-aa1ebfd4="" class="driver">
+                <div data-v-aa1ebfd4="" class="name-country">
+                  <h2 data-v-aa1ebfd4="">Mick Schumacher</h2>
+                  <p data-v-aa1ebfd4="">Germany</p>
+                </div>
+                <div data-v-aa1ebfd4="" class="image">
+                  <img
+                    data-v-aa1ebfd4=""
+                    src="./creative3_files/schumacher.jpg" />
+                </div>
+                <div data-v-aa1ebfd4="" class="info">
+                  <div data-v-aa1ebfd4="" class="team-number">
+                    <h2 data-v-aa1ebfd4="">Haas</h2>
+                    <h2 data-v-aa1ebfd4="">47</h2>
+                  </div>
+                </div>
+              </div>
+              <div data-v-aa1ebfd4="" class="driver">
+                <div data-v-aa1ebfd4="" class="name-country">
+                  <h2 data-v-aa1ebfd4="">Kevin Magnussen</h2>
+                  <p data-v-aa1ebfd4="">Denmark</p>
+                </div>
+                <div data-v-aa1ebfd4="" class="image">
+                  <img
+                    data-v-aa1ebfd4=""
+                    src="./creative3_files/magnussen.jpg" />
+                </div>
+                <div data-v-aa1ebfd4="" class="info">
+                  <div data-v-aa1ebfd4="" class="team-number">
+                    <h2 data-v-aa1ebfd4="">Haas</h2>
+                    <h2 data-v-aa1ebfd4="">20</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <a
+          target="_blank"
+          href="https://github.com/BYUCS260/grocery-store-ikasshaw.git"
+          ><img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFNTE3OEEzMjk5QTAxMUUyOUExNUJDMTA0NkE4OTA0RCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyQTQxNEFCQzk5QTExMUUyOUExNUJDMTA0NkE4OTA0RCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkU1MTc4QTMwOTlBMDExRTI5QTE1QkMxMDQ2QTg5MDREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkU1MTc4QTMxOTlBMDExRTI5QTE1QkMxMDQ2QTg5MDREIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+R7ClIwAADR5JREFUeNrsnQuw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"
+            alt="Github icon"
+        /></a>
+      </footer>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
