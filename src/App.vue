@@ -23,9 +23,7 @@
       <router-view />
     </div>
     <footer>
-      <a
-        target="_blank"
-        href="https://github.com/BYUCS260/grocery-store-ikasshaw.git"
+      <a target="_blank" href="https://github.com/ikasshaw/creative3.git"
         ><img src="../src/assets/GitHub-Mark-120px-plus.png" alt="Github icon"
       /></a>
     </footer>
